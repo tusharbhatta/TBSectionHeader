@@ -308,8 +308,7 @@
     }
     
 
-    
-    id <NSFetchedResultsSectionInfo> sectionInfo = [[fetchedResultsController sections] objectAtIndex:0];
+    id <NSFetchedResultsSectionInfo> sectionInfo = ([[fetchedResultsController sections] count])?[[fetchedResultsController sections] objectAtIndex:0]:nil;
     if([sectionInfo numberOfObjects]){
         NSIndexPath *nextIndex = [NSIndexPath indexPathForRow:currentSelection.row?currentSelection.row-1:currentSelection.row inSection:0];
         [self.tableView selectRowAtIndexPath:nextIndex animated:YES scrollPosition:UITableViewScrollPositionTop];
@@ -352,7 +351,7 @@
     
     // Edit the section name key path and cache name if appropriate.
     // nil for section name key path means "no sections".
-    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:managedObjectContext sectionNameKeyPath:nil cacheName:@"Root"];
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:managedObjectContext sectionNameKeyPath:@"entity.name" cacheName:@"Root"];
     aFetchedResultsController.delegate = self;
     self.fetchedResultsController = aFetchedResultsController;
     
@@ -395,9 +394,9 @@
             
         case NSFetchedResultsChangeInsert:
             [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
-            CGRect rect = [tableView rectForHeaderInSection:0];
-            rect.size.height = 30;
-            [tableView scrollRectToVisible:rect animated:NO];
+           // CGRect rect = [tableView rectForHeaderInSection:0];
+           // rect.size.height = 30;
+           // [tableView scrollRectToVisible:rect animated:NO];
             break;
             
         case NSFetchedResultsChangeDelete:
