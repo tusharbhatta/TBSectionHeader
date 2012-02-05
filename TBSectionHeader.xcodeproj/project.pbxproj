@@ -23,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		784030E814DEB3C400398566 /* TBSectionHeader OLD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "TBSectionHeader OLD.xcdatamodel"; sourceTree = "<group>"; };
 		785AD3F1143E2CB200BC05A3 /* MyHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHeader.h; sourceTree = "<group>"; };
 		785AD3F2143E2CB200BC05A3 /* MyHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHeader.m; sourceTree = "<group>"; };
 		78D095841432247F004767F3 /* TBSectionHeader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBSectionHeader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -306,6 +307,7 @@
 		78D0959C14322481004767F3 /* TBSectionHeader.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				784030E814DEB3C400398566 /* TBSectionHeader OLD.xcdatamodel */,
 				78D0959D14322481004767F3 /* TBSectionHeader.xcdatamodel */,
 			);
 			currentVersion = 78D0959D14322481004767F3 /* TBSectionHeader.xcdatamodel */;
